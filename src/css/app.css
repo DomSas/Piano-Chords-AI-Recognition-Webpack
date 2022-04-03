@@ -1,0 +1,11 @@
+/* Your app custom styles here */
+
+
+.content-container {
+    width: 80%;
+    margin: auto;
+}
+
+.audio_btn {
+    margin-bottom: 50px;
+}
