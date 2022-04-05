@@ -1,15 +1,14 @@
-
-import HomePage from '../pages/home.vue';
-import NotFoundPage from '../pages/404.vue';
+import PredictingPage from "../pages/PredictingPage.vue";
+import LoadingPage from "../pages/LoadingPage.vue";
 
 var routes = [
   {
-    path: '/',
-    component: HomePage,
+    path: "/",
+    component: LoadingPage,
   },
   {
-    path: '(.*)',
-    component: NotFoundPage,
+    path: "/predicting",
+    component: PredictingPage,
   }
 ];
 

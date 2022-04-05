@@ -45,10 +45,27 @@ export default {
 
     // Predict piano chords
     const startRecognizingChords = async () => {
+      const options = { probabilityThreshold: 0.85 };
+
+            audioinput.start({
+        streamToWebAudio: true,
+      });
+
+      // cordova.plugins.diagnostic.requestMicrophoneAuthorization(
+      //   function (status) {
+      //     if (status === cordova.plugins.diagnostic.permissionStatus.GRANTED) {
+      //       console.log("Microphone use is authorized");
+      //     }
+      //   },
+      //   function (error) {
+      //     console.error(error);
+      //   }
+      // );
+
       // STEP 1: Load the model!
-      classifier = await ml5.soundClassifier(modelURL + "model.json");
-      // STEP 2: Start classifying (will listen to mic by default)
-      classifier.classify(gotResults);
+      // classifier = await ml5.soundClassifier(modelURL + "model.json", options);
+      // // STEP 2: Start classifying (will listen to mic by default)
+      // classifier.classify(gotResults);
     };
 
     function gotResults(error, results) {

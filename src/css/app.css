@@ -1,11 +1,56 @@
 /* Your app custom styles here */
+:root {
+  --dark-brown: #472d30;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+}
 
 .content-container {
-    width: 80%;
-    margin: auto;
+  width: 80%;
+  margin: auto;
 }
 
 .audio_btn {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.loading-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  height: 100%;
+  overflow: auto;
+  color: var(--dark-brown);
+}
+
+.loading-page .loading-page__title {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.loading-page .loading-page__img {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.loading-page .loading-page__loading-text {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.loading-page .loading-page__app-info {
+  position: absolute;
+  bottom: 10px;
+  font-size: 16;
+  font-weight: 200;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 }

@@ -3,8 +3,7 @@
     <!-- Right panel with reveal effect-->
     <f7-panel right reveal theme-dark>
       <f7-view>
-        <f7-page>
-        </f7-page>
+        <f7-page> </f7-page>
       </f7-view>
     </f7-panel>
 
@@ -31,11 +30,18 @@ export default {
     };
     onMounted(() => {
       f7ready(() => {
-        // Call F7 APIs here
+        // await blinkCapture.loadModel();
+        // First prediction takes more time to predict so we pass empty image during loading page
+        // await blinkCapture.startPrediciton(imageRef.value);
+
+        setTimeout(() => {
+          // f7.views.current.router.navigate("/predicting", {
+          //   transition: "f7-dive",
+          //   clearPreviousHistory: true,
+          // });
+        }, 4000);
       });
     });
-
-
     return {
       f7params,
     };
