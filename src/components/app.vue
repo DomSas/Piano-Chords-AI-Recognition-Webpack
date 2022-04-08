@@ -35,10 +35,10 @@ export default {
         // await blinkCapture.startPrediciton(imageRef.value);
 
         setTimeout(() => {
-          // f7.views.current.router.navigate("/predicting", {
-          //   transition: "f7-dive",
-          //   clearPreviousHistory: true,
-          // });
+          f7.views.current.router.navigate("/predicting", {
+            transition: "f7-dive",
+            clearPreviousHistory: true,
+          });
         }, 4000);
       });
     });
