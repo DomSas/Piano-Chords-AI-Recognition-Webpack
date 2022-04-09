@@ -61,7 +61,6 @@ export default {
       card.addEventListener("click", function () {
         flipCard();
       });
-      console.log(isMobile());
       startRecognizingChords();
     });
 
@@ -134,8 +133,11 @@ export default {
       console.log(results[0].label);
 
       if (results[0].label === currentChordLetter.value) {
-        // TODO: Show correct banner
-        randomizeChordLetter();
+        card.classList.toggle("is-green");
+        setTimeout(() => {
+          card.classList.toggle("is-green");
+          randomizeChordLetter();
+        }, 1500);
       }
     }
 
