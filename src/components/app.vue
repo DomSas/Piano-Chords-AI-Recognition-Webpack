@@ -16,6 +16,7 @@ import { ref, onMounted } from "vue";
 import { f7, f7ready } from "framework7-vue";
 
 import routes from "../js/routes.js";
+import helperFunctions from "../js/helperFunctions";
 
 export default {
   setup() {
@@ -29,17 +30,13 @@ export default {
       },
     };
     onMounted(() => {
-      f7ready(() => {
-        // await blinkCapture.loadModel();
-        // First prediction takes more time to predict so we pass empty image during loading page
-        // await blinkCapture.startPrediciton(imageRef.value);
+      f7ready(async () => {
+        await helperFunctions.loadModel();
 
-        setTimeout(() => {
-          f7.views.current.router.navigate("/predicting", {
-            transition: "f7-dive",
-            clearPreviousHistory: true,
-          });
-        }, 4000);
+        f7.views.current.router.navigate("/predicting", {
+          transition: "f7-dive",
+          clearPreviousHistory: true,
+        });
       });
     });
     return {
