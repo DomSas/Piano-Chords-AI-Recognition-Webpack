@@ -79,7 +79,8 @@
             "cordova-plugin-statusbar": {},
             "cordova-plugin-audioinput": {},
             "cordova-plugin-file": {},
-            "cordova-plugin-media": {}
+            "cordova-plugin-media": {},
+            "cordova.plugins.diagnostic": {}
         }
     }
 }
