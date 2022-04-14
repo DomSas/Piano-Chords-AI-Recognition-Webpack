@@ -29,25 +29,18 @@ const loadModel = async () => {
 
   if (isMobile() == true) {
     console.log("here");
-    audioinput.start({
-      streamToWebAudio: true,
+    document.addEventListener("deviceready", async () => {
+      cordova.plugins.diagnostic.requestMicrophoneAuthorization(
+        (status) => {
+          if (status === cordova.plugins.diagnostic.permissionStatus.GRANTED) {
+            console.log("Microphone use is authorized");
+          }
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
     });
-    audioinput.stop(() => {
-      console.log("stopped");
-    });
-
-    // document.addEventListener("deviceready", async () => {
-    //   cordova.plugins.diagnostic.requestMicrophoneAuthorization(
-    //     function (status) {
-    //       if (status === cordova.plugins.diagnostic.permissionStatus.GRANTED) {
-    //         console.log("Microphone use is authorized");
-    //       }
-    //     },
-    //     function (error) {
-    //       console.error(error);
-    //     }
-    //   );
-    // });
   }
 
   classifier = await ml5.soundClassifier(modelURL + "model.json", options);
