@@ -49,7 +49,7 @@ export default {
     const chordLetters = ["C", "D", "E", "F"];
     const currentChordLetter = ref("");
     const chordImageVisible = ref(false);
-    const label = ref("waiting...");
+    const label = ref("Waiting...");
     let card;
 
     onMounted(() => {

@@ -1,8 +1,9 @@
-const modelURL = "https://teachablemachine.withgoogle.com/models/oQapXjh1t/";
+const laptopModelURL =
+  "https://teachablemachine.withgoogle.com/models/oQapXjh1t/";
+const phoneModelURL =
+  "https://teachablemachine.withgoogle.com/models/6Oapb3YVQ/";
 let predictedChord;
-// Classifier and model url
 let classifier;
-let label;
 
 const isAndroid = () => {
   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -25,10 +26,10 @@ const isMobile = () => {
 };
 
 const loadModel = async () => {
-  const options = { probabilityThreshold: 0.7 };
+  let currentModelURL = isAndroid ? phoneModelURL : laptopModelURL;
+  const options = { probabilityThreshold: 0.8 };
 
   if (isMobile() == true) {
-    console.log("here");
     document.addEventListener("deviceready", async () => {
       cordova.plugins.diagnostic.requestMicrophoneAuthorization(
         (status) => {
@@ -43,7 +44,10 @@ const loadModel = async () => {
     });
   }
 
-  classifier = await ml5.soundClassifier(modelURL + "model.json", options);
+  classifier = await ml5.soundClassifier(
+    currentModelURL + "model.json",
+    options
+  );
 };
 
 const startPrediction = async (callback) => {
