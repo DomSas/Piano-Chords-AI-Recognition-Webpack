@@ -52,15 +52,6 @@ export default {
     const label = ref("Waiting...");
     let card;
 
-    onMounted(() => {
-      randomizeChordLetter();
-      card = document.querySelector(".predicting-page__chord-card");
-      card.addEventListener("click", function () {
-        flipCard();
-      });
-      startRecognizingChords();
-    });
-
     const flipCard = () => {
       card.classList.toggle("is-flipped");
       chordImageVisible.value = !chordImageVisible.value;
@@ -85,6 +76,15 @@ export default {
         }
       });
     };
+
+    onMounted(() => {
+      randomizeChordLetter();
+      card = document.querySelector(".predicting-page__chord-card");
+      card.addEventListener("click", function () {
+        flipCard();
+      });
+      startRecognizingChords();
+    });
 
     return {
       startRecognizingChords,
