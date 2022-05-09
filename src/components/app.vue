@@ -23,6 +23,9 @@ export default {
     };
     onMounted(() => {
       f7ready(async () => {
+        if(helperFunctions.isIos()){
+          alert("Access to microphone does not yet work for iOS devices.")
+        }
         await helperFunctions.loadModel();
 
         f7.views.current.router.navigate("/predicting", {
