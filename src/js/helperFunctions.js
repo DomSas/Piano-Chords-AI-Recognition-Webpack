@@ -2,7 +2,6 @@ const laptopModelURL =
   "https://teachablemachine.withgoogle.com/models/oQapXjh1t/";
 const phoneModelURL =
   "https://teachablemachine.withgoogle.com/models/6Oapb3YVQ/";
-let predictedChord;
 let classifier;
 
 const isAndroid = () => {
@@ -29,7 +28,7 @@ const loadModel = async () => {
   let currentModelURL = isAndroid ? phoneModelURL : laptopModelURL;
   const options = { probabilityThreshold: 0.8 };
 
-  if (isMobile() == true) {
+  if (isMobile()) {
     document.addEventListener("deviceready", async () => {
       cordova.plugins.diagnostic.requestMicrophoneAuthorization(
         (status) => {
@@ -64,11 +63,8 @@ const startPrediction = async (callback) => {
 
 const helperFunctions = {
   loadModel,
-  isAndroid,
   isIos,
-  isMobile,
   startPrediction,
-  predictedChord,
 };
 
 export default helperFunctions;
