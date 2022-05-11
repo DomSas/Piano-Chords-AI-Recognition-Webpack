@@ -25,7 +25,8 @@ const isMobile = () => {
 };
 
 const loadModel = async () => {
-  let currentModelURL = isAndroid ? phoneModelURL : laptopModelURL;
+  let currentModelURL = "../model/model.json";
+  let currentModelURLWithProtocol = "file://../model/model.json";
   const options = { probabilityThreshold: 0.8 };
 
   if (isMobile()) {
@@ -43,10 +44,7 @@ const loadModel = async () => {
     });
   }
 
-  classifier = await ml5.soundClassifier(
-    currentModelURL + "model.json",
-    options
-  );
+  classifier = await ml5.soundClassifier(currentModelURL, options);
 };
 
 const startPrediction = async (callback) => {

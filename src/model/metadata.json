@@ -1,0 +1,6 @@
+{
+  "tfjsSpeechCommandsVersion": "0.4.0",
+  "modelName": "TMv2",
+  "timeStamp": "2022-03-30T07:53:30.069Z",
+  "wordLabels": ["Background Noise", "C", "D", "E", "F"]
+}
