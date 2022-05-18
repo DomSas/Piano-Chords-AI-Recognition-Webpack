@@ -13,7 +13,7 @@
           v-if="!chordImageVisible"
           class="predicting-page__card-face card-front"
         >
-          <h2 class="predicting-page__chord-name">{{ currentChordLetter }}</h2>
+          <h2 class="predicting-page__chord-name">{{ currentChordLetter.toUpperCase() }}</h2>
         </div>
 
         <div
@@ -46,7 +46,7 @@ import helperFunctions from "../js/helperFunctions";
 
 export default {
   setup() {
-    const chordLetters = ["C", "D", "E", "F"];
+    const chordLetters = ["c", "d", "e", "f"];
     const currentChordLetter = ref("");
     const chordImageVisible = ref(false);
     const label = ref("Waiting...");

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" id="test.example.helloworld" version="1.0.0">
-  <name>mic_test</name>
-  <description>f7-vue3-minimal</description>
+  <name>piano-ai-chord</name>
+  <description>piano-ai-chord-app</description>
   <author/>
   <content src="index.html"/>
   <access origin="*"/>
