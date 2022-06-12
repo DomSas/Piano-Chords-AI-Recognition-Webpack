@@ -67,7 +67,7 @@ export default {
         console.log(recognizedChord);
         label.value = recognizedChord;
 
-        if (recognizedChord === currentChordLetter.value) {
+        if (recognizedChord === currentChordLetter.value.toUpperCase()) {
           card.classList.toggle("is-green");
           setTimeout(() => {
             card.classList.toggle("is-green");
