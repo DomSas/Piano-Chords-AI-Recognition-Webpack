@@ -2,6 +2,9 @@
 This app uses audio captured by phone/laptop microphone and predicts the piano chords which user plays. It uses [Teachable Machine](https://teachablemachine.withgoogle.com/) to train the model and [ml5.js](https://ml5js.org/) for predicting the results. 
 Webpack is used for bundling the application and Monaca for mobile deployment.
 
+https://user-images.githubusercontent.com/62658199/173228087-72278353-1198-4c74-a737-b103b3fe52cc.mp4
+
+
 [Figma wireframe](https://www.figma.com/file/zI5qOksnj3LoiE3nakZ5Rb/Piano-Chords-Recognition-App?node-id=0%3A1).  
 
 ## How to start
