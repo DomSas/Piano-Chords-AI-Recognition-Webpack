@@ -7,6 +7,10 @@ https://user-images.githubusercontent.com/62658199/173228087-72278353-1198-4c74-
 
 [Figma wireframe](https://www.figma.com/file/zI5qOksnj3LoiE3nakZ5Rb/Piano-Chords-Recognition-App?node-id=0%3A1).  
 
+### Tutorial
+
+There is a tutorial available in Medium via [this](https://medium.com/the-web-tub/piano-chords-prediction-with-ai-teachable-machine-22d0865c2100) link.
+
 ## How to start
 1. Download the project.
 2. Run `npm install` in the directory.
